@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useSchedule = (delay) => {
+const useSchedule = (delay = 1000) => {
   const [time, setTime] = useState(0);
   const [active, setActive] = useState(false);
 
@@ -18,7 +18,6 @@ const useSchedule = (delay) => {
     if (active) {
       interval = setInterval(() => {
         setTime((time) => time + 1);
-        callback(time);
       }, delay);
     } else if (!active && time !== 0) {
       clearInterval(interval);
