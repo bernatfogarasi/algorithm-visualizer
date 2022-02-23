@@ -2,7 +2,7 @@
 
 ## Work in progress
 
-This project is only half-finished.
+
 
 ## Live
 
